@@ -1,0 +1,95 @@
+cd /tmp/
+
+wget http://dsv.yamalzdrav.ru/Juniper/vMX/vmx-bundle-22.4R1-S1.1.tgz
+
+tar xvzf vmx-bundle-22.4R1-S1.1.tgz
+
+cd vmx/images
+
+mkdir /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re0
+mkdir /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re1
+
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc0
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc1
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc2
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc3
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc4
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc5
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc6
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc7
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc8
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc9
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc10
+mkdir /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc11
+
+
+cp junos-vmx-x86-64-22.4R1-S1.1.qcow2 /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re0/virtioa.qcow2
+cp vmxhdd.img /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re0/virtiob.qcow2
+cp metadata-usb-re0.img /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re0/virtioc.qcow2
+
+cp junos-vmx-x86-64-22.4R1-S1.1.qcow2 /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re1/virtioa.qcow2
+cp vmxhdd.img /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re1/virtiob.qcow2
+cp metadata-usb-re1.img /opt/unetlab/addons/qemu/vmxvcp-22.4R1-S1.1-VCP-re1/virtioc.qcow2
+
+
+-----------------------------------------------------------------------------------------------------
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc0/virtioa.qcow2
+cp metadata-usb-service-pic-4g.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc0/virtiob.qcow2
+---------------------------------------------------------------------------------------------------------
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc1/virtioa.qcow2
+cp metadata-usb-fpc1.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc1/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc2/virtioa.qcow2
+cp metadata-usb-fpc2.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc2/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc3/virtioa.qcow2
+cp metadata-usb-fpc3.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc3/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc4/virtioa.qcow2
+cp metadata-usb-fpc4.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc4/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc5/virtioa.qcow2
+cp metadata-usb-fpc5.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc5/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc6/virtioa.qcow2
+cp metadata-usb-fpc6.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc6/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc7/virtioa.qcow2
+cp metadata-usb-fpc7.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc7/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc8/virtioa.qcow2
+cp metadata-usb-fpc8.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc8/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc9/virtioa.qcow2
+cp metadata-usb-fpc9.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc9/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc10/virtioa.qcow2
+cp metadata-usb-fpc10.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc10/virtiob.qcow2
+
+cp vFPC-20221102.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc11/virtioa.qcow2
+cp metadata-usb-fpc11.img /opt/unetlab/addons/qemu/vmxvfp-22.4R1-S1.1-VFP-fpc11/virtiob.qcow2
+
+
+/opt/unetlab/wrappers/unl_wrapper -a fixpermissions
+
+
+
+set system root-authentication plain-text-password
+
+delete chassis auto-image-upgrade
+
+set system commit synchronize
+set chassis redundancy routing-engine 0 master
+set chassis redundancy routing-engine 1 backup
+set chassis fpc 1 lite-mode
+set chassis fpc 2 lite-mode
+set chassis fpc 3 lite-mode
+set chassis fpc 4 lite-mode
+set chassis fpc 5 lite-mode
+set chassis fpc 6 lite-mode
+set chassis fpc 7 lite-mode
+set chassis fpc 8 lite-mode
+set chassis fpc 9 lite-mode
+set chassis fpc 10 lite-mode
+set chassis fpc 11 lite-mode
