@@ -4,12 +4,12 @@ import os
 from shutil import copy
 
 fpc_count = int(input('Enter the number of fpc, maximum possible value 12:'))
-mpc = input('Select the size of RAM for the MPC module, the possible values are 2, 4, or 10 :')
-mpc = 'metadata-usb-service-pic-' + mpc +'g.img'
+mpc = input("Select the RAM size for the MPC module, possible values are 2, 4 or 10, if you don't need MPC, click 0:")
+mpc_img = 'metadata-usb-service-pic-' + mpc +'g.img'
 
-URL = "http://dsv.yamalzdrav.ru/Juniper/vMX/vmx-bundle-22.4R1-S1.1.tgz"
+URL = 'http://dsv.yamalzdrav.ru/Juniper/vMX/vmx-bundle-22.4R1-S1.1.tgz'
 
-response = wget.download(URL, "/tmp/vmx-bundle-22.4R1-S1.1.tgz")
+response = wget.download(URL, out='/tmp/')
 
 print('Extracting the archive\n\n')
 
@@ -22,8 +22,8 @@ img_dir = '/tmp/vmx/images/'
 eve_dir = '/opt/unetlab/addons/qemu/'
 
 for i in range(fpc_count):
-   if i == 0:
-      image = img_dir + mpc
+   if i == 0 and mpc != 0:
+      image = img_dir + mpc_img
    else:
       image = img_dir + 'metadata-usb-fpc' + str(i) + '.img'
    fpc_dir = eve_dir + 'vmxvfp-22.4R1-S1.1-VFP-fpc' + str(i) + '/'
