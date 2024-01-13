@@ -22,7 +22,7 @@ img_dir = '/tmp/vmx/images/'
 eve_dir = '/opt/unetlab/addons/qemu/'
 
 for i in range(fpc_count):
-   if i == 0 and mpc != 0:
+   if i == 0 and int(mpc) != 0:
       image = img_dir + mpc_img
    else:
       image = img_dir + 'metadata-usb-fpc' + str(i) + '.img'
